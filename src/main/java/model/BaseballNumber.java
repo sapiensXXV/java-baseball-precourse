@@ -46,7 +46,7 @@ public class BaseballNumber {
         // TODO: 검증로직 작성
         Set<Integer> nonDuplicateNumbers = new HashSet<>(numbers);
         if (nonDuplicateNumbers.size() != NUMBERS_SIZE) {
-            throw new IllegalArgumentException("[ERROR] 숫자는 중복될 수 업습니다.");
+            throw new IllegalArgumentException("[ERROR] 숫자는 중복될 수 없습니다.");
         }
     }
 
