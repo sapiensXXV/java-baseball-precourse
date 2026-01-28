@@ -8,7 +8,7 @@ public class Referee {
         int balls = 0;
         int strikes = 0;
 
-        for (int i = 0; i < Constant.NUMBERS_SIZE; i++) {
+        for (int i = 0; i < GameConfig.NUMBERS_SIZE; i++) {
             int userNumber = user.getNumber(i);
 
             // 스트라이크인지 확인 (위치와 숫자가 모두 같음);

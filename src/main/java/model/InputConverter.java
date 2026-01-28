@@ -3,6 +3,8 @@ package model;
 import java.util.ArrayList;
 import java.util.List;
 
+import static model.ErrorMessage.*;
+
 public class InputConverter {
 
     private InputConverter() {}
@@ -15,7 +17,7 @@ public class InputConverter {
 
         for (char character : trimmedInput.toCharArray()) {
             if (!Character.isDigit(character)) {
-                throw new IllegalArgumentException("[ERROR] 숫자만 입력해주세요");
+                throw new IllegalArgumentException(NOT_NUMBER);
             }
 
             int number = Character.getNumericValue(character);
