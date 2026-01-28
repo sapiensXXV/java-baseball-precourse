@@ -24,9 +24,25 @@ public class GameController {
     }
 
     public void run() {
-        BaseballNumber computerNumber = randomNumberGenerator.generate();
+        System.out.println("숫자 야구 게임을 시작합니다."); // 게임 시작 문구 (선택 사항)
 
-        System.out.println("컴퓨터 숫자 생성 완료 (테스트용): " + computerNumber.getNumbers());
+        // 게임 전체 반복 (재시작 로직)
+        while (true) {
+            // 1. 컴퓨터 숫자 생성
+            BaseballNumber computerNumber = randomNumberGenerator.generate();
+
+            // 2. 한 판 플레이 (3스트라이크 맞출 때까지 반복)
+            play(computerNumber);
+
+            // 3. 게임 종료 후 재시작 여부 확인
+            // "게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요."
+            String restartCommand = inputView.inputRestartCommand();
+
+            if (restartCommand.equals("2")) {
+                break; // while문 탈출 -> 프로그램 종료
+            }
+            // 1번이면 while문 처음으로 돌아가서 새 숫자 생성
+        }
     }
 
     private void play(BaseballNumber computerNumber) {
