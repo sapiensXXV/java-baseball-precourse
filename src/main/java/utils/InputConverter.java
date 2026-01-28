@@ -1,9 +1,9 @@
-package model;
+package utils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static model.ErrorMessage.*;
+import static constant.ErrorMessage.*;
 
 public class InputConverter {
 

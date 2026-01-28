@@ -1,10 +1,10 @@
 package controller;
 
 import dto.GameResult;
-import model.BaseballNumber;
-import model.InputConverter;
-import model.RandomNumberGenerator;
-import model.Referee;
+import domain.BaseballNumber;
+import utils.InputConverter;
+import domain.RandomNumberGenerator;
+import domain.Referee;
 import view.InputView;
 import view.OutputView;
 

@@ -1,5 +1,6 @@
-package model;
+package domain;
 
+import constant.GameConfig;
 import dto.GameResult;
 
 public class Referee {

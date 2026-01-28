@@ -1,12 +1,12 @@
-package model;
+package domain;
 
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import static model.ErrorMessage.*;
-import static model.GameConfig.*;
+import static constant.ErrorMessage.*;
+import static constant.GameConfig.*;
 
 /**
  * 숫자 3개를 담고 있는 객체
