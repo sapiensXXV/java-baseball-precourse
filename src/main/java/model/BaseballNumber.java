@@ -1,4 +1,10 @@
+package model;
+
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
+import static model.Constant.*;
 
 /**
  * 숫자 3개를 담고 있는 객체
@@ -21,14 +27,26 @@ public class BaseballNumber {
 
     private void validateSize(List<Integer> numbers) {
         // TODO: 검증로직 작성
+        if (numbers.size() != NUMBERS_SIZE) {
+            throw new IllegalArgumentException("[ERROR] 숫자는 3자리여야 합니다.");
+        }
     }
 
     private void validateRange(List<Integer> numbers) {
         // TODO: 검증로직 작성
+        for (int number: numbers) {
+            if (number < NUMBER_MIN_RANGE || number > NUMBER_MAX_RANGE) {
+                throw new IllegalArgumentException("[ERROR] 숫자는 1부터 9까지의 수여야 합니다.");
+            }
+        }
     }
 
     private void validateDuplicate(List<Integer> numbers) {
         // TODO: 검증로직 작성
+        Set<Integer> nonDuplicateNumbers = new HashSet<>(numbers);
+        if (nonDuplicateNumbers.size() != NUMBERS_SIZE) {
+            throw new IllegalArgumentException("[ERROR] 숫자는 중복될 수 업습니다.");
+        }
     }
 
     // 유틸리티 메서드들
