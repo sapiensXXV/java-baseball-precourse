@@ -28,14 +28,12 @@ public class BaseballNumber {
     }
 
     private void validateSize(List<Integer> numbers) {
-        // TODO: 검증로직 작성
         if (numbers.size() != NUMBERS_SIZE) {
             throw new IllegalArgumentException(INVALID_SIZE);
         }
     }
 
     private void validateRange(List<Integer> numbers) {
-        // TODO: 검증로직 작성
         for (int number: numbers) {
             if (number < NUMBER_MIN_RANGE || number > NUMBER_MAX_RANGE) {
                 throw new IllegalArgumentException(OUT_OF_RANGE);
@@ -44,7 +42,6 @@ public class BaseballNumber {
     }
 
     private void validateDuplicate(List<Integer> numbers) {
-        // TODO: 검증로직 작성
         Set<Integer> nonDuplicateNumbers = new HashSet<>(numbers);
         if (nonDuplicateNumbers.size() != NUMBERS_SIZE) {
             throw new IllegalArgumentException(DUPLICATE_NUMBER);
@@ -63,7 +60,6 @@ public class BaseballNumber {
         return numbers.contains(number);
     }
 
-    // TODO: 불변리스트 반환 메서드 작성
     public List<Integer> getNumbers() {
         return Collections.unmodifiableList(numbers);
     }
