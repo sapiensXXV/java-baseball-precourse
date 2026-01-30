@@ -16,11 +16,16 @@ public class GameController {
     private final RandomNumberGenerator randomNumberGenerator;
     private final Referee referee;
 
-    public GameController() {
-        this.inputView = new InputView();
-        this.outputView = new OutputView();
-        this.randomNumberGenerator = new RandomNumberGenerator();
-        this.referee = new Referee();
+    public GameController(
+            InputView inputView,
+            OutputView outputView,
+            RandomNumberGenerator randomNumberGenerator,
+            Referee referee
+    ) {
+        this.inputView = inputView;
+        this.outputView = outputView;
+        this.randomNumberGenerator = randomNumberGenerator;
+        this.referee = referee;
     }
 
     public void run() {
