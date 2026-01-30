@@ -1,5 +1,7 @@
 package utils;
 
+import constant.ErrorMessage;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +34,7 @@ public class InputConverter {
 
     private static void validateLength(String input) {
         if (input.length() != 3) {
-            throw new IllegalArgumentException(OUT_OF_RANGE);
+            throw new IllegalArgumentException(INVALID_SIZE);
         }
     }
 
