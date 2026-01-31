@@ -4,9 +4,7 @@ import domain.NumberGenerator;
 import dto.GameResult;
 import domain.BaseballNumber;
 import utils.InputConverter;
-import domain.RandomNumberGenerator;
 import domain.Referee;
-import view.ConsoleOutputView;
 import view.InputView;
 import view.OutputView;
 
@@ -31,8 +29,7 @@ public class GameController {
     }
 
     public void run() {
-        System.out.println("숫자 야구 게임을 시작합니다."); // 게임 시작 문구 (선택 사항)
-
+        outputView.printMessage("숫자 야구 게임을 시작하겠습니다.");
         // 게임 전체 반복 (재시작 로직)
         while (true) {
             // 1. 컴퓨터 숫자 생성
@@ -65,7 +62,7 @@ public class GameController {
                     break;
                 }
             } catch (IllegalArgumentException e) {
-                outputView.printError(e.getMessage());
+                outputView.printMessage(e.getMessage());
             }
         }
     }

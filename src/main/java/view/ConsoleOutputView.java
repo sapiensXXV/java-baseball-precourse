@@ -25,7 +25,7 @@ public class ConsoleOutputView implements OutputView {
         System.out.println("3개의 숫자를 모두 맞추셨습니다! 게임 종료");
     }
 
-    public void printError(String message) {
+    public void printMessage(String message) {
         System.out.println(message);
     }
 }

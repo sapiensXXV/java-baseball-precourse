@@ -24,4 +24,15 @@ public class GameResult {
     public int getStrike() {
         return strike;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        if (isThreeStrike()) {
+            sb.append("3스트라이크");
+        } else {
+            sb.append(getBall() + "볼 " + getStrike() + "스트라이크");
+        }
+        return sb.toString();
+    }
 }

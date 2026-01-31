@@ -6,5 +6,5 @@ public interface OutputView {
 
     public void printResult(GameResult result);
     public void printGameSuccess();
-    public void printError(String message);
+    public void printMessage(String message);
 }
