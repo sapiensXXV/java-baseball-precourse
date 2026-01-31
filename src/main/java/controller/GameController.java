@@ -1,10 +1,12 @@
 package controller;
 
+import domain.NumberGenerator;
 import dto.GameResult;
 import domain.BaseballNumber;
 import utils.InputConverter;
 import domain.RandomNumberGenerator;
 import domain.Referee;
+import view.ConsoleOutputView;
 import view.InputView;
 import view.OutputView;
 
@@ -13,13 +15,13 @@ public class GameController {
 
     private final InputView inputView;
     private final OutputView outputView;
-    private final RandomNumberGenerator randomNumberGenerator;
+    private final NumberGenerator randomNumberGenerator;
     private final Referee referee;
 
     public GameController(
             InputView inputView,
             OutputView outputView,
-            RandomNumberGenerator randomNumberGenerator,
+            NumberGenerator randomNumberGenerator,
             Referee referee
     ) {
         this.inputView = inputView;

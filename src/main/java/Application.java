@@ -1,14 +1,14 @@
 import controller.GameController;
 import domain.RandomNumberGenerator;
 import domain.Referee;
-import view.InputView;
-import view.OutputView;
+import view.ConsoleInputView;
+import view.ConsoleOutputView;
 
 public class Application {
     public static void main(String[] args) {
         GameController gameController = new GameController(
-                new InputView(),
-                new OutputView(),
+                new ConsoleInputView(),
+                new ConsoleOutputView(),
                 new RandomNumberGenerator(),
                 new Referee()
         );

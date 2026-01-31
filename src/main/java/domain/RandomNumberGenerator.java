@@ -2,7 +2,7 @@ package domain;
 
 import java.util.*;
 
-public class RandomNumberGenerator {
+public class RandomNumberGenerator implements NumberGenerator {
 
     private final Random random;
 
